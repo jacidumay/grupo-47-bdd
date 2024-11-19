@@ -1,0 +1,59 @@
+RUN,Nombre,"Apellido P",telefono,"email personal","email  institucional",DEDICACIÓN,CONTRATO,DIURNO,VESPERTINO,SEDE,CARRERA,"GRADO ACADÉMICO",JERARQUÍA,CARGO,ESTAMENTO
+15059751,RUFUS,SCRIMGEOUR,456789022,rufus.scrimgeour.devia@coldmail.com,rufus.scrimgeour.devia@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,LICENCIATURA,"TITULAR REGULAR",null,null
+21423313,SéPTIMA,VECTOR,789012355,septima.vector@yeeha.com,septima.vector@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,DOCTOR,"ASISTENTE DOCENTE","Director (a) Formación Cont. y Postgra",null
+20082984,VERNON,DURSLEY,789012356,vernon.dursley.renard@yeeha.com,vernon.dursley.renard@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+17241044,VOLDEMORT,SEñOROSCURO,234567902,voldemort.senoroscuros.elinnombrable@gmall.com,voldemort.senoroscuros.elinnombrable@lamejor.com,-1.0,"FULL TIME",diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO REGULAR","Profesor por Jornada",null
+19457329,FLEUR,DELACOUR,678901238,fleur.delacour.diaz@gmall.com,fleur.delacour.diaz@lamejor.com,null,"FULL TIME",diurno,vespertino,BEAUXBATON,null,LICENCIATURA,"INSTRUCTORA DOCENTE","Secretaria Estudios",null
+23677609,DAPHNE,GREENGRASS,345678904,daphne.greengrass@michea.com,daphne.greengrass@lamejor,null,HONORARIO,diurno,null,BEAUXBATON,null,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+15089005,BELLATRIX,LESTRANGE,234567892,bellatrix.lestrange.beltran@gmall.com,bellatrix.lestrange.beltran@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"TITULAR REGULAR",null,null
+19064170,GILDEROY,LOCKHART,901234571,gilderoy.lockhart@yeeha.com,gilderoy.lockhart@lamejor.com,null,HONORARIO,diurno,null,BEAUXBATON,HECHICERÍA,"DOCTOR ","ASISTENTE DOCENTE",null,null
+16789372,ERNIE,MACMILLAN,345678905,ernie.macmillan@riquelme.com,ernie.macmillan@lamejor,null,"FULL TIME",diurno,null,BEAUXBATON,HECHICERÍA,MAGISTER,"ASOCIADO DOCENTE","Director(a) Carrera (i)",null
+17043066,MINERVA,MCGONAGALL,null,minerva.mcgonagall@gmall.com,minerva.mcgonagall@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"ASISTENTE DOCENTE",null,null
+13689982,REMUS,LUPIN,789012354,remus.lupin@coldmail.com,remus.lupin@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE","Profesor por Jornada",null
+8270690,VINCENT,CRABBE,901234578,vincent.crabbe.piturra@gmall.com,vincent.crabbe.piturra@lamejor.com,null,HONORARIO,null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+7682646,DUDLEY,DURSLEY,234567894,dudley.dursley.plaza@coldmail.com,dudley.dursley.plaza@lamejor.com,null,HONORARIO,null,null,BEAUXBATON,HECHICERÍA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+13827502,REMUS,LUPIN,678901243,remus.lupin.barrientos@yeeha.com,remus.lupin.barrientos@lamejor.com,null,"FULL TIME",diurno,null,HOGWARTS,MAGIA,MAGISTER,"TITULAR DOCENTE","Profesor 1/2 Jornada",null
+11057406,FILIUS,FLITWICK,456789016,filius.flitwick@coldmail.com,filius.flitwick@lamejor.com,null,HONORARIO,diurno,null,BEAUXBATON,HECHICERÍA,MAGISTER,"SIN JERARQUIZAR",null,null
+12972527,SEAMUS,FINNIGAN,678901244,seamus.finnigan.contreras@coldmail.com,seamus.finnigan.contreras@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE",null,null
+7900381,VIKTOR,KRUM,890123467,viktor.krum.duran@yeeha.com,viktor.krum.duran@lamejor.com,null,"FULL TIME",diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE","Profesor 1/2 Jornada",null
+12791816,XENOPHILIUS,LOVEGOOD,456789024,xenophilius.lovegood.gonzalez@coldmail.com,xenophilius.lovegood.gonzalez@lamejor.com,null,HONORARIO,null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+14064936,ANGELINA,JOHNSON,456789013,angelina.johnson.reyes@yeeha.com,angelina.johnson.reyes@lamejor.com,null,HONORARIO,diurno,null,BEAUXBATON,MAGIA,LICENCIATURA,"SIN JERARQUIZAR",null,null
+7481441,ARTHUR,WEASLEY,789012346,arthur.weasley.diaz@yeeha.com,arthur.weasley.diaz@lamejor.com,null,"FULL TIME",diurno,null,null,null,LICENCIATURA,"INSTRUCTOR DOCENTE","Coord. de Clínica ",Académico
+21904102,PETUNIA,DURSLEY,890123464,petunia.dursley.jeraldo@gmall.com,petunia.dursley.jeraldo@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+7434992,PADMA,PATIL,456789020,padma.patil.sandoval@coldmail.com,padma.patil.sandoval@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"TITULAR DOCENTE",null,null
+12193904,SILVANUSN.,KETTLEBURN,901234577,silvanus.kettleburn@gmall.com,silvanus.kettleburn@lamejor.com,null,HONORARIO,null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE",null,null
+14183901,TERRY,BOOT,567890134,terry.boot.diaz@coldmail.com,terry.boot.diaz@lamejor.com,null,"FULL TIME",null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE","Director Inst. Investigación y Postgra",null
+13475408,POPPY,POMFREY,234567899,poppy.pomfrey@gmall.com,poppy.pomfrey@lamejor.com,null,"FULL TIME",null,vespertino,HOGWARTS,MAGIA,LICENCIATURA,"TITULAR DOCENTE","Profesor por Jornada",null
+20638852,SIRIUS,BLACK,234567901,sirius.black.esquivel@coldmail.com,sirius.black.esquivel@lamejor.com,null,"FULL TIME",diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASOCIADA REGULAR","Director (a) Centro de Sol. Colab.de C",null
+12758128,ARGUS,FILCH,678901235,argus.filch@gmall.com,argus.filch@lamejor.com,null,HONORARIO,diurno,null,BEAUXBATON,null,"DOCTOR ","ASISTENTE DOCENTE",null,null
+24009027,NEVILLE,LONGBOTTOM,234567898,neville.longbottom.valenzuela@gmall.com,neville.longbottom.valenzuela@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+16901248,HERMIONE,GRANGER,890123461,hermione.granger.benavides@coldmail.com,hermione.granger.benavides@lamejor.com,null,HONORARIO,diurno,null,BEAUXBATON," HECHICERÍA",DOCTOR,"ASOCIADA DOCENTE",null,null
+21713351,CORMAC,MCLAGGEN,890123458,cormac.mclaggen@valenzuela.com,cormac.mclaggen@lamejor,null,HONORARIO,diurno,null,null,null,MAGISTER,"ASISTENTE DOCENTE",null,null
+15155275,PANSY,PARKINSON,567890131,pansy.parkinson.larroucau@coldmail.com,pansy.parkinson.larroucau@lamejor.com,null,"FULL TIME",null,vespertino,HOGWARTS,MAGIA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+9909814,HANNAH,ABBOTT,567890128,hannah.abbott@viana.com,hannah.abbott@@lamejor,null,HONORARIO,null,null,BEAUXBATON,HECHICERÍA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+10778699,LAMAS,BELLA,null,lamas.bella.delmundo@yeeha.com,lamas.bella.delmundo@lamejor.com,120.0,"DOUBLE  TIME",diurno,vespertino,TODAS,HECHICERÍA,MAGISTER,"ASISTENTE DOCENTE",VICEDECANA,Académico
+24496460,PARVATI,PATIL,678901242,parvati.patil.pardo@yeeha.com,parvati.patil.pardo@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,LICENCIATURA,"ASOCIADO DOCENTE",null,null
+19465195,THEODORE,NOTT,678901245,theodore.nott.plaza@gmall.com,theodore.nott.plaza@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,LICENCIATURA,"INSTRUCTOR DOCENTE",null,null
+19525663,SUSAN,BONES,345678912,susan.bones@poncedeleon.com,susan.bones@@lamejor,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+13567862,DEAN,THOMAS,456789015,dean.thomas.basaez@yeeha.com,dean.thomas.basaez@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+20537459,ALASTOR,MOODY,678901234,alastor.moody.munita@coldmail.com,alastor.moody.munita@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"INSTRUCTOR DOCENTE","Profesor por Jornada",null
+20811745,WILHELMINAN.,GRUBBLY-PLANK,345678913,wilhelmina.grubblyplank@gmall.com,wilhelmina.grubblyplank@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+23116742,DOLORES,UMBRIDGE,789012348,dolores.umbridge.baquerizo@coldmail.com,dolores.umbridge.baquerizo@lamejor.com,null,HONORARIO,diurno,null,null,null,LICENCIATURA,"INSTRUCTOR DOCENTE",null,null
+17754798,DRACO,MALFOY,901234570,draco.malfoy.yanez@gmall.com,draco.malfoy.yanez@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"ASOCIADA DOCENTE",null,null
+10693674,PERCY,WEASLEY,789012353,percy.weasley.silva@coldmail.com,percy.weasley.silva@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,LICENCIATURA,"TITULAR DOCENTE",null,null
+9017415,ALBUS,DUMBLEDORE,890123456,albus.dumbledore@coldmail.com,albus.dumbledore@lamejor.com,null,"FULL TIME",diurno,null,null,null,DOCTOR,"ASISTENTE DOCENTE","Director(a) Carrera",null
+12949268,MOLLY,WEASLEY,890123463,molly.weasley.robles@gmall.com,molly.weasley.robles@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,BACHILLER,"ASOCIADO REGULAR","Secretario(a) Estudios",null
+19609585,ANTHONY,GOLDSTEIN,567890124,anthony.goldstein.contreras@gmall.com,anthony.goldstein.contreras@lamejor.com,null,HONORARIO,diurno,null,null,null,"MAGISTER ","ASOCIADA DOCENTE",null,null
+23184735,SEVERUS,SNAPE,890123466,severus.snape@yeeha.com,severus.snape@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE","Director (a) Formación Cont. y Postgra",null
+19406721,SYBILL,TRELAWNEY,456789023,sybill.trelawney@gmall.com,sybill.trelawney@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+24719317,LUCIUS,MALFOY,345678908,lucius.malfoy.aguilera@yeeha.com,lucius.malfoy.aguilera@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+23156352,OLIVER,WOOD,345678909,oliver.wood.fuentes@gmall.com,oliver.wood.fuentes@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE","Profesor por Jornada",null
+21982013,ROWENA,RAVENCLAW,234567900,rowena.ravenclaw.vargas@gmall.com,rowena.ravenclaw.vargas@lamejor.com,null,HONORARIO,null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASISTENTE DOCENTE",null,null
+25090138,LILY,POTTER,234567897,lily.potter.aspillaga@coldmail.com,lily.potter.aspillaga@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"TITULAR DOCENTE",Profesor,null
+16563364,ZACHARIAS,SMITH,567890135,zacharias.smith@yeeha.com,zacharias.smith@lamejor.com,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+18231420,DAVID,YATES,345678910,null,,null,HONORARIO,diurno,null,HOGWARTS,MAGIA,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+22630533,ALECTO,CARROW,901234567,alecto.carrow@gmall.com,alecto.carrow@lamejor.com,null,HONORARIO,diurno,null,null,null,LICENCIATURA,"ASISTENTE DOCENTE",null,null
+20454143,CEDRIC,DIGGORY,456789014,cedric.diggory.diaz@yeeha.com,cedric.diggory.diaz@lamejor.com,null,HONORARIO,diurno,null,null,null,MAGISTER,"INSTRUCTOR DOCENTE",null,null
+16185180,MICHAEL,CORNER,678901241,michael.corner.vargas@yeeha.com,michael.corner.vargas@lamejor.com,null,"FULL TIME",diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE","Director(a) Carrera",null
+10300778,RUBEUS,HAGRID,345678911,rubeus.hagrid@yeeha.com,rubeus.hagrid@lamejor.com,null,HONORARIO,diurno,vespertino,HOGWARTS,MAGIA,MAGISTER,"TITULAR DOCENTE",null,null
+11822639,SALAZAR,SLYTHERIN,567890133,salazar.slytherin.avila@yeeha.com,salazar.slytherin.avila@lamejor.com,null,HONORARIO,null,vespertino,HOGWARTS,MAGIA,MAGISTER,"ASOCIADO DOCENTE",null,null
