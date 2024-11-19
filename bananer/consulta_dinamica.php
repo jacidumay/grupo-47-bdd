@@ -13,7 +13,6 @@ if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
 
-// Función para sanitizar y validar entrada
 function sanitizarEntrada($entrada) {
     $entrada = trim($entrada);
     $entrada = strip_tags($entrada);
@@ -101,14 +100,26 @@ if ($conexion->connect_error) {
                 }
             }
 
-            // Preparar consulta con parámetros
             $consultaSQL = "SELECT " . implode(", ", $atributosArray) . " FROM $tabla";
+            $condicionesArray = array();
             
             if (!empty($condicion)) {
-                $consultaSQL .= " WHERE $condicion";
+                $condicionesArray = explode(" AND ", $condicion);
+                $consultaSQL .= " WHERE ";
+                $i = 0;
+                $whereConditions = array();
+                foreach ($condicionesArray as $cond) {
+                    $whereConditions[] = "?";
+                    $i++;
+                }
+                $consultaSQL .= implode(" AND ", $whereConditions);
+                $stmt = $conexion->prepare($consultaSQL);
+                $stmt->bind_param(str_repeat("s", count($condicionesArray)), ...$condicionesArray);
+                $stmt->execute();
+                $resultado = $stmt->get_result();
+            } else {
+                $resultado = $conexion->query($consultaSQL);
             }
-
-            $resultado = $conexion->query($consultaSQL);
 
             if ($resultado) {
                 echo "<h3>Resultados:</h3>";

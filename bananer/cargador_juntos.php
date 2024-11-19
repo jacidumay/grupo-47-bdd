@@ -91,6 +91,7 @@ if ($conexion->connect_error) {
 // Archivos CSV a importar
 $archivosCSV = [
     'Asignaturas' => 'Asignaturas.csv',
+    'Notas' => 'Notas.csv',
     'Docentes_Planificados' => 'Docentes_Planificados.csv',
     'Estudiantes' => 'Estudiantes.csv',
     'Planeacion' => 'Planeacion.csv',
