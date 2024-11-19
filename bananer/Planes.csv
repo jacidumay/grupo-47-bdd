@@ -1,0 +1,44 @@
+"Código Plan",Facultad,Carrera,Plan,Jornada,Sede,Grado,Modalidad,"Inicio Vigencia"
+GH1,"Facultad de Magia y Hechicería",Magia,"MAGIA (UAGADOU NOCTURNA) PLAN 2003",Vespertino,Uagadou,Pregrado,Presencial,01/03/03
+GH2,"Facultad de Magia y Hechicería",Magia,"MAGIA UAGADOU PLAN 2005 (DIURNO)",Diurno,Uagadou,Pregrado,Presencial,31/01/05
+GH3,"Facultad de Magia y Hechicería",Magia,"MAGIA UAGADOU PLAN 2005 (NOCTURNA)",Vespertino,Beauxbaton,Pregrado,Presencial,31/01/05
+HD1,"Facultad de Magia y Hechicería","Diplomado en Magia Procesal Civil","DIPLOMADO EN MAGIA NECRÓFAGA HOCILARGA",Diurno,Hogwarts,Postgrado,Presencial,20/06/03
+HD2,"Facultad de Magia y Hechicería","Diplomado en Magia Procesal Civil","DIPLOMADO EN MAGIA NECRÓFAGA HOCILARGA (ON-LINE)",Diurno,Hogwarts,Postgrado,OnLine,03/06/19
+HD3,"Facultad de Magia y Hechicería","Diplomado en Mediación en Familia E Infancia","DIPLOMADO DE MEDIACIÓN EN MUGGLES",Diurno,Hogwarts,Postgrado,Presencial,07/12/16
+HD4,"Facultad de Magia y Hechicería","Diplomado en griphook","DIPLOMADO EN GRIPHOOK",Diurno,Hogwarts,Postgrado,Presencial,14/12/16
+HP1,"Facultad de Magia y Hechicería",Magia,"MAGIA PLAN 2003",Diurno,Hogwarts,Pregrado,Presencial,11/04/87
+HP2,"Facultad de Magia y Hechicería",Magia,"MAGIA PLAN 2005",Diurno,Hogwarts,Pregrado,Presencial,31/01/05
+HS1,"Facultad de Magia y Hechicería","Diplomado en Fabricante de varitas","DIPLOMADO EN FABRICANTE DE VARITAS",Diurno,Hogwarts,Postgrado,Presencial,12/12/16
+HS2,"Facultad de Magia y Hechicería","Diplomado en Fabricante de varitas","DIPLOMADO EN FABRICANTE DE VARITAS",Diurno,Hogwarts,Postgrado,Presencial,22/03/19
+HS3,"Facultad de Magia y Hechicería","Diplomado en Fundamentos del Sistema Penal","DIPLOMADO EN FUNDAMENTOS DEL SISTEMA PENAL",Diurno,Hogwarts,Postgrado,Presencial,18/01/18
+HS4,"Facultad de Magia y Hechicería","Diplomado en Magia Registral Inmobiliario","DIPLOMADO EN MAGIA REGISTRAL INMOBILIARIO",Diurno,Hogwarts,Postgrado,Presencial,03/12/18
+HS5,"Facultad de Magia y Hechicería","Diplomado en Propiedades Especiales y Tributación Inmobiliaria","DIPLOMADO EN PROPIEDADES ESPECIALES Y TRIBUTACIÓN INMOBILIARIA",Diurno,Hogwarts,Postgrado,Presencial,03/12/18
+HS6,"Facultad de Magia y Hechicería","Diplomado en Magias Humanos y Diversidad","DIPLOMADO EN MAGIA DE HUMANOS Y TROLLS",Diurno,Hogwarts,Postgrado,Presencial,22/03/19
+DM1,"Facultad de Magia y Hechicería","Diplomado en Magia runas","DIPLOMADO EN MAGIA RUNAS",Diurno,Hogwarts,Postgrado,Presencial,22/03/19
+DM2,"Facultad de Magia y Hechicería","Diplomado en Magia Procesal Penal","DIPLOMADO EN MAGIA NECRÓFAGA PPP",Diurno,Hogwarts,Postgrado,Presencial,20/06/03
+DM3,"Facultad de Magia y Hechicería","Diplomado en Magia Procesal Penal","DIPLOMADO EN MAGIA NECRÓFAGA PPP (ON-LINE)",Diurno,Hogwarts,Postgrado,OnLine,03/06/19
+DM4,"Facultad de Magia y Hechicería","Diplomado Nueva Protección de Datos Personales en Chile","DIPLOMADO PDP",Diurno,Hogwarts,Postgrado,Presencial,02/02/24
+MD1,"Facultad de Magia y Hechicería","Diplomado en Intervención Familiar y Socioambiental","DIPLOMADO EN INTERVENCIÓN MUGGLER Y SOCIOAMBIENTAL",Diurno,Hogwarts,Postgrado,Presencial,21/12/17
+PH1,"Facultad de Magia y Hechicería",Magia,"MAGIA CASTELOBRUXO PLAN 2005 (DIURNO)",Diurno,Beauxbaton,Pregrado,Presencial,31/01/05
+PH2,"Facultad de Magia y Hechicería",Magia,"MAGIA CASTELOBRUXO PLAN 2005 (NOCTURNA)",Vespertino,Beauxbaton,Pregrado,Presencial,31/01/05
+HW1,"Facultad de Magia y Hechicería",Magia,"MAGIA NOCTURNA PLAN 2003",Vespertino,Hogwarts,Pregrado,Presencial,01/01/83
+HW2,"Facultad de Magia y Hechicería",Magia,"MAGIA NOCTURNA PLAN 2005",Vespertino,Hogwarts,Pregrado,Presencial,31/01/05
+MG1,"Facultad de Magia y Hechicería","Magíster en Mediación, Gestión Colaborativa de Conflictos","MAGÍSTER EN DUELO DE MAGOS DE HUFFLEPUFF",Diurno,Hogwarts,Postgrado,Presencial,09/12/16
+MG2,"Facultad de Magia y Hechicería","Magíster en Mediación, Gestión Colaborativa de Conflictos","MAGÍSTER EN DUELO DE MAGOS DE HUFFLEPUFF",Diurno,Hogwarts,Postgrado,Presencial,13/09/23
+MG3,"Facultad de Magia y Hechicería","Magíster en Magias Humanos Y Ciudadanía","MAGÍSTER EN MAGIAS HUMANOS Y CIUDADANÍA",Diurno,Hogwarts,Postgrado,Presencial,22/03/19
+MG4,"Facultad de Magia y Hechicería","Magíster en Magia Procesal","MAGÍSTER EN MAGIA NECRÓFAGA",Diurno,Hogwarts,Postgrado,Presencial,20/06/03
+MG5,"Facultad de Magia y Hechicería","Magíster en Magia Procesal","MAGÍSTER EN MAGIA NECRÓFAGA (ON-LINE)",Diurno,Hogwarts,Postgrado,OnLine,24/03/20
+MG6,"Facultad de Magia y Hechicería","Magíster en Magia Corporativo","MAGÍSTER EN MAGIA MINISTERIAL",Diurno,Hogwarts,Postgrado,Presencial,14/12/16
+MG7,"Facultad de Magia y Hechicería","Magíster en Magia Corporativo","MAGÍSTER EN MAGIA MINISTERIAL",Diurno,Hogwarts,Postgrado,Presencial,10/01/24
+MG8,"Facultad de Magia y Hechicería","Magíster en Magia Público","MAGÍSTER EN MAGIA PÚBLICO",Diurno,Hogwarts,Postgrado,Presencial,22/03/19
+MG9,"Facultad de Magia y Hechicería","Magíster en Sistema Penal","MAGÍSTER EN CHAMBERS",Diurno,Hogwarts,Postgrado,Presencial,20/01/18
+MG0,"Facultad de Magia y Hechicería","Magíster en Sistema Penal","MAGISTER EN CHAMBERS",Diurno,Beauxbaton,Postgrado,Presencial,20/01/18
+MG11,"Facultad de Magia y Hechicería","Magíster en Magia Inmobiliario Y Registral","MAGÍSTER EN CASTILLOS",Diurno,Hogwarts,Postgrado,Presencial,03/12/18
+MT1,"Facultad de Magia y Hechicería","Magíster en Intervención Social Y Desarrollo Humano","MAGÍSTER EN ASTRONOMíA",Diurno,Hogwarts,Postgrado,Presencial,21/12/17
+MT2,"Facultad de Magia y Hechicería","Magíster en Intervención Social Y Desarrollo Humano","MAGÍSTER EN  ASTRONOMíA (SEDE BEUXBATON)",Diurno,Beauxbaton,Postgrado,Presencial,21/12/17
+DO1,"Facultad de Magia y Hechicería","Doctorado en Magia","DOCTORADO EN MAGIA",Diurno,Hogwarts,Postgrado,Presencial,05/06/20
+HG1,"Facultad de Magia y Hechicería","Programa Especial de Licenciatura en Hechicería","PROGRAMA ESPECIAL DE LICENCIATURA EN HECHICERíA",Diurno,Hogwarts,"Programa Especial",Presencial,05/01/18
+HG2,"Facultad de Magia y Hechicería","Programa Especial de Licenciatura en Hechicería","PROGRAMA ESPECIAL DE LICENCIATURA EN HECHICERíA (BEUXBATON)",Diurno,Beauxbaton,"Programa Especial",Presencial,02/01/24
+WH3,"Facultad de Magia y Hechicería",Hechicería,"HECHICERíA CASTELOBRUXO",Diurno,Beauxbaton,Pregrado,Presencial,01/04/16
+WH1,"Facultad de Magia y Hechicería",Hechicería,"HECHICERíA PLAN 2005  (SEDE HOGWARDS)",Diurno,Hogwarts,Pregrado,Presencial,01/10/13
+WH2,"Facultad de Magia y Hechicería",Hechicería,"HECHICERíA PLAN 2016  (SEDE HOGWARDS)",Diurno,Hogwarts,Pregrado,Presencial,01/04/16
