@@ -11,13 +11,18 @@ function validar_y_corregir_datos_docentes($fila, $formato) {
         // Normalizar el valor eliminando espacios en blanco
         $valor = trim($fila[$campo] ?? '');
 
+        // Si la columna admite nulos y el valor está vacío, asignar "null"
+        if ($permite_nulo && array_key_exists($campo, $fila) && $valor === '') {
+            $fila[$campo] = 'null';
+        }
+
         // Validar campos que no permiten nulos
         if ($no_nulo && $valor === '') {
             $errores[$campo] = 'Valor nulo en campo no nulo';
         }
 
         // Validar el campo 'telefono'
-        if ($campo === 'telefono' && $valor !== '') {
+        if ($campo === 'telefono' && $valor !== '' && $valor !== 'null') {
             $telefono = preg_replace('/\D/', '', $valor); // Eliminar caracteres no numéricos
             if (strlen($telefono) !== 9) {
                 $errores[$campo] = 'El teléfono debe tener exactamente 9 dígitos y no contener letras';
@@ -70,6 +75,13 @@ function procesar_csv_docentes($nombre_archivo, $formato) {
 
     // Leer encabezado y normalizar eliminando espacios adicionales
     $encabezado = fgetcsv($archivo, 0, $delimitador);
+    if (!$encabezado) {
+        echo "Error: El archivo $nombre_archivo está vacío o tiene un encabezado no válido.\n";
+        fclose($archivo);
+        fclose($archivo_correcto);
+        fclose($archivo_errores);
+        return;
+    }
     $encabezado_normalizado = array_map('trim', $encabezado);
     $columnas_encabezado = count($encabezado_normalizado);
 
@@ -93,8 +105,14 @@ function procesar_csv_docentes($nombre_archivo, $formato) {
         $resultado = validar_y_corregir_datos_docentes($fila_asociativa, $formato);
         $errores = $resultado['errores'];
 
+        // Asegurar que la fila corregida tiene la misma cantidad de columnas que el encabezado
         if (empty($errores)) {
-            fputcsv($archivo_correcto, array_values($resultado['fila_corregida']));
+            $fila_corregida = array_values($resultado['fila_corregida']);
+            if (count($fila_corregida) === $columnas_encabezado) {
+                fputcsv($archivo_correcto, $fila_corregida);
+            } else {
+                fputcsv($archivo_errores, $fila);
+            }
         } else {
             fputcsv($archivo_errores, $fila);
         }
@@ -131,3 +149,4 @@ $formato_docentes = [
 procesar_csv_docentes('docentes planificados.csv', $formato_docentes);
 
 ?>
+

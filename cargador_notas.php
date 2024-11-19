@@ -15,8 +15,9 @@ function validar_y_corregir_notas($fila, $formato, $tabla_calificaciones) {
         // Normalizar el valor eliminando espacios en blanco
         $valor = trim($fila[$campo] ?? '');
 
-        // Si el campo permite nulos y el valor es una cadena vacía, no es un error
+        // Si el campo permite nulos y el valor es una cadena vacía, asignar "null"
         if ($permite_nulo && $valor === '') {
+            $fila[$campo] = 'null';
             continue;
         }
 
@@ -37,12 +38,12 @@ function validar_y_corregir_notas($fila, $formato, $tabla_calificaciones) {
         $correcciones['asignatura'] = "Espacio inicial eliminado y convertido a mayúsculas en 'asignatura'.";
     }
 
-    // Si el periodo asignatura es '2024-02', calificación y nota pueden estar vacías y se asigna 'X'
+    // Si el periodo asignatura es '2024-02', calificación y nota pueden estar vacías y se asigna 'null'
     if ($periodo_asignatura === '2024-02') {
         if ($calificacion === '' && ($nota === '' || $nota === null)) {
-            $fila['calificación'] = 'X';
-            $fila['nota'] = 'X';
-            $correcciones['calificación'] = "Calificación y nota establecidas como 'X' para el periodo '2024-02'.";
+            $fila['calificación'] = 'null';
+            $fila['nota'] = 'null';
+            $correcciones['calificación'] = "Calificación y nota establecidas como 'null' para el periodo '2024-02'.";
         }
     } else {
         // Si tanto la calificación como la nota están vacías o nulas, enviar la fila a errores
@@ -87,10 +88,10 @@ function validar_y_corregir_notas($fila, $formato, $tabla_calificaciones) {
                 }
             }
 
-            // Si la nota está vacía o nula, asignar 'X'
+            // Si la nota está vacía o nula, asignar 'null'
             if ($nota === '' || $nota === null) {
-                $fila['nota'] = 'X';
-                $correcciones['nota'] = "Nota nula reemplazada por 'X'.";
+                $fila['nota'] = 'null';
+                $correcciones['nota'] = "Nota nula reemplazada por 'null'.";
             }
         }
     }
@@ -113,6 +114,14 @@ function procesar_csv($nombre_archivo, $formato, $tabla_calificaciones) {
 
     // Leer encabezado
     $encabezado = fgetcsv($archivo, 0, $delimitador);
+    if (!$encabezado || empty($encabezado)) {
+        echo "Error: El archivo $nombre_archivo está vacío o tiene un encabezado no válido.\n";
+        fclose($archivo);
+        fclose($archivo_correcto);
+        fclose($archivo_errores);
+        return;
+    }
+
     $columnas_encabezado = count($encabezado);
 
     // Normalizar el encabezado eliminando espacios en blanco y haciendo todo en minúsculas
@@ -124,13 +133,21 @@ function procesar_csv($nombre_archivo, $formato, $tabla_calificaciones) {
     fputcsv($archivo_errores, $encabezado);
 
     // Procesar todas las filas del archivo
-    $fila_numero = 1;
     while (($fila = fgetcsv($archivo, 0, $delimitador)) !== false) {
+        if (empty(array_filter($fila))) {
+            // Ignorar filas vacías
+            continue;
+        }
+
         $columnas_fila = count($fila);
 
-        if ($columnas_fila !== $columnas_encabezado) {
+        // Verificar si el número de columnas coincide con el encabezado
+        if ($columnas_fila < count($encabezado_normalizado)) {
+            // Si faltan columnas, agregar "null" hasta que coincida con el encabezado
+            $fila = array_pad($fila, count($encabezado_normalizado), 'null');
+        } elseif ($columnas_fila > count($encabezado_normalizado)) {
+            // Si hay más columnas de las necesarias, marcar como error
             fputcsv($archivo_errores, $fila);
-            $fila_numero++;
             continue;
         }
 
@@ -142,13 +159,17 @@ function procesar_csv($nombre_archivo, $formato, $tabla_calificaciones) {
         $errores = $resultado['errores'];
         $fila_corregida = $resultado['fila_corregida'];
 
+        // Asegurar que la fila corregida tiene la misma cantidad de columnas que el encabezado
         if (empty($errores)) {
-            fputcsv($archivo_correcto, array_values($fila_corregida));
+            $fila_corregida = array_values($fila_corregida);
+            if (count($fila_corregida) === count($encabezado_normalizado)) {
+                fputcsv($archivo_correcto, $fila_corregida);
+            } else {
+                fputcsv($archivo_errores, $fila);
+            }
         } else {
             fputcsv($archivo_errores, $fila);
         }
-
-        $fila_numero++;
     }
 
     fclose($archivo);
@@ -194,5 +215,6 @@ $formato_archivo = [
 procesar_csv('Notas.csv', $formato_archivo, $tabla_calificaciones);
 
 ?>
+
 
 

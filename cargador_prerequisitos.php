@@ -15,8 +15,9 @@ function validar_y_corregir_prerequisitos($fila, $formato) {
         // Normalizar el valor eliminando espacios en blanco
         $valor = trim($fila[$campo] ?? '');
 
-        // Si el campo permite nulos y el valor es una cadena vacía, no es un error
+        // Si el campo permite nulos y el valor es una cadena vacía, asignar "null"
         if ($permite_nulo && $valor === '') {
+            $fila[$campo] = 'null';
             continue;
         }
 
@@ -117,5 +118,6 @@ $formato_prerequisitos = [
 // Procesar las filas de 'prerequisitos.csv'
 procesar_csv_prerequisitos('prerequisitos.csv', $formato_prerequisitos);
 
+?>
 
 

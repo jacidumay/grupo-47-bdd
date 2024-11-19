@@ -13,5 +13,6 @@ if (!isset($_SESSION['email'])) {
     <li><a href="propuesta_ramos.php">Propuesta de toma de ramos</a></li>
     <li><a href="historial_academico.php">Historial académico del estudiante</a></li>
     <li><a href="ingresar_notas.php">Subir Notas desde CSV</a></li>
+    <li><a href="transaccion_notas.php">Transaccion de Notas</a></li>
     <li><a href="desertores.php">Lista de Desertores</a></li> <!-- Enlace al BONUS -->
 </ul>

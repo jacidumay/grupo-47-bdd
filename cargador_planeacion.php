@@ -26,6 +26,13 @@ function validar_y_corregir_datos_planeacion($fila) {
         $errores['Cupo'] = 'Cupo o Inscritos no definidos';
     }
 
+    // Reemplazar valores nulos (cadenas vacías) con "null"
+    foreach ($fila as $campo => $valor) {
+        if (trim($valor) === '') {
+            $fila[$campo] = 'null';
+        }
+    }
+
     // Si no hay errores, la fila es correcta
     return ['errores' => $errores, 'fila_corregida' => $fila];
 }
