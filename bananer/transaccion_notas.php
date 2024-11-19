@@ -26,6 +26,26 @@ try {
     END;";
     $conn->query($crear_procedimiento);
 
+    // Crear vista con el acta de notas
+    $conn->query("DROP VIEW IF EXISTS vista_acta_notas");
+    $crear_vista = "
+    CREATE VIEW vista_acta_notas AS
+    SELECT
+        a.numero_alumno,
+        a.asignatura AS curso,
+        a.periodo,
+        CONCAT(e.nombres, ' ', e.primer_apellido, ' ', e.segundo_apellido) AS nombre_estudiante,
+        CONCAT(p.nombres, ' ', p.primer_apellido, ' ', p.segundo_apellido) AS nombre_profesor,
+        a.nota_final
+    FROM acta a
+    JOIN estudiantes e ON a.numero_alumno = e.numero_alumno
+    JOIN profesores p ON a.asignatura = p.asignatura AND a.periodo = p.periodo
+    WHERE a.nota_final IS NOT NULL
+        AND a.nota_final >= 1.0 AND a.nota_final <= 7.0
+        AND e.numero_alumno IS NOT NULL
+        AND p.nombres IS NOT NULL AND p.primer_apellido IS NOT NULL;
+    ";
+    $conn->query($crear_vista);
     // Crear trigger
     $conn->query("DROP TRIGGER IF EXISTS calcular_calificacion");
     $crear_trigger = "
@@ -93,8 +113,9 @@ try {
     $conn->query("CALL procesar_acta_notas()");
     
     $conn->commit();
+
     echo "Insertadas $count filas exitosamente\n";
-    
+    echo "Vista 'vista_acta_notas' creada correctamente.\n";
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . "\n";
     $conn->rollback();
