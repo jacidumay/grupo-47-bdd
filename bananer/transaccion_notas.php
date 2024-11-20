@@ -22,30 +22,49 @@ try {
             WHEN oportunidad_mar IS NULL OR oportunidad_mar = 0 THEN oportunidad_dic
             WHEN oportunidad_dic >= 4.0 AND oportunidad_dic <= 7.0 THEN oportunidad_dic
             ELSE oportunidad_mar
-        END;
+        END
+        WHERE nota_final IS NULL;
     END;";
+  
     $conn->query($crear_procedimiento);
+    
 
-    // Crear vista con el acta de notas
-    $conn->query("DROP VIEW IF EXISTS vista_acta_notas");
+    // Eliminar la vista si existe
+    if (!$conn->query("DROP VIEW IF EXISTS vista_acta_notas")) {
+        throw new Exception("Error eliminando vista existente: " . $conn->error);
+    }
+    $conn->query("CALL procesar_acta_notas()");
+    // Crear la nueva vista
     $crear_vista = "
     CREATE VIEW vista_acta_notas AS
-    SELECT
+    SELECT DISTINCT
         a.numero_alumno,
         a.asignatura AS curso,
         a.periodo,
-        CONCAT(e.nombres, ' ', e.primer_apellido, ' ', e.segundo_apellido) AS nombre_estudiante,
-        CONCAT(p.nombres, ' ', p.primer_apellido, ' ', p.segundo_apellido) AS nombre_profesor,
+        CONCAT(e.Nombres COLLATE utf8mb4_unicode_ci, ' ', 
+               e.Primer_Apellido COLLATE utf8mb4_unicode_ci, ' ', 
+               e.Segundo_Apellido COLLATE utf8mb4_unicode_ci) AS nombre_estudiante,
+        'Profesor Por Asignar' AS nombre_profesor,
         a.nota_final
     FROM acta a
-    JOIN estudiantes e ON a.numero_alumno = e.numero_alumno
-    JOIN profesores p ON a.asignatura = p.asignatura AND a.periodo = p.periodo
-    WHERE a.nota_final IS NOT NULL
-        AND a.nota_final >= 1.0 AND a.nota_final <= 7.0
-        AND e.numero_alumno IS NOT NULL
-        AND p.nombres IS NOT NULL AND p.primer_apellido IS NOT NULL;
+    JOIN Estudiantes e 
+        ON CAST(a.numero_alumno AS CHAR) COLLATE utf8mb4_unicode_ci = e.Número_de_alumno COLLATE utf8mb4_unicode_ci
+    LEFT JOIN Planeacion p 
+        ON a.asignatura COLLATE utf8mb4_unicode_ci = p.Id_Asignatura COLLATE utf8mb4_unicode_ci
+        AND REPLACE(a.periodo, '-2', '-02') COLLATE utf8mb4_unicode_ci = p.Periodo COLLATE utf8mb4_unicode_ci
+        AND a.seccion COLLATE utf8mb4_unicode_ci = p.Sección COLLATE utf8mb4_unicode_ci
+    WHERE (a.oportunidad_dic >= 1.0 AND a.oportunidad_dic <= 7.0)
+        AND (a.oportunidad_mar IS NULL 
+             OR (a.oportunidad_mar >= 1.0 AND a.oportunidad_mar <= 7.0))
+        AND e.Número_de_alumno IS NOT NULL;
     ";
-    $conn->query($crear_vista);
+
+    if ($conn->query($crear_vista) === TRUE) {
+        echo "Vista creada exitosamente\n";
+    } else {
+        throw new Exception("Error creando vista: " . $conn->error);
+    }
+    // Crear trigger
     // Crear trigger
     $conn->query("DROP TRIGGER IF EXISTS calcular_calificacion");
     $crear_trigger = "
@@ -65,6 +84,13 @@ try {
         ELSE SET calificacion_final = 'R';
         END IF;
 
+        -- Eliminar registros anteriores
+        DELETE FROM Notas 
+        WHERE `Número_de_alumno` = NEW.numero_alumno 
+        AND Asignatura = NEW.asignatura
+        AND Periodo_Asignatura = NEW.periodo;
+
+        -- Insertar nuevo registro
         INSERT INTO Notas (
             `Número_de_alumno`, 
             RUN, 
@@ -82,13 +108,20 @@ try {
             NEW.nota_final
         );
     END;";
-    $conn->query($crear_trigger);
 
+    if ($conn->query($crear_trigger) === TRUE) {
+        echo "Notas finales calculadas\n";
+    } 
+
+    // Procesar archivo CSV
     // Procesar archivo CSV
     $conn->begin_transaction();
     $archivo = fopen($nombre_archivo, 'r');
     $encabezado = fgetcsv($archivo, 0, ';');
     $count = 0;
+
+    // Limpiar tabla acta antes de insertar
+    $conn->query("TRUNCATE TABLE acta");
 
     while (($fila = fgetcsv($archivo, 0, ';')) !== false) {
         if (!empty($fila[0])) {
@@ -108,14 +141,16 @@ try {
             $count++;
         }
     }
-    
-    // Ejecutar procedimiento almacenado
-    $conn->query("CALL procesar_acta_notas()");
-    
+
+    // Ejecutar procedimiento almacenado para calcular notas finales
+
+
+    // Confirmar la transacción
     $conn->commit();
 
     echo "Insertadas $count filas exitosamente\n";
-    echo "Vista 'vista_acta_notas' creada correctamente.\n";
+
+
 } catch (Exception $e) {
     echo "Error: " . $e->getMessage() . "\n";
     $conn->rollback();
